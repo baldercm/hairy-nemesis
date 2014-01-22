@@ -1,4 +1,6 @@
-describe("alert", function () {
+'use strict';
+
+describe('GlyphIcon Directive', function () {
 
   var scope, $compile;
   var element;
