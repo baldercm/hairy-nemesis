@@ -13,6 +13,10 @@ angular.module('hairyNemesisApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/curso', {
+        templateUrl: 'views/curso.html',
+        controller: 'CursoCtrl'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
