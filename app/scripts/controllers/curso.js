@@ -3,9 +3,9 @@
 angular.module('hairyNemesisApp')
   .controller('CursoCtrl', function ($scope) {
     $scope.cursos = [
-      { id: 1, name: 'Curso 11-12'},
-      { id: 2, name: 'Curso 12-13'},
-      { id: 3, name: 'Curso 13-14'}
+      { id: 1, name: 'Curso 11-12', start : new Date(2011, 8, 1)},
+      { id: 2, name: 'Curso 12-13', start : new Date(2012, 8, 1)},
+      { id: 3, name: 'Curso 13-14', start : new Date(2013, 8, 1)}
     ];
 
     $scope.newCurso = {};
@@ -14,10 +14,8 @@ angular.module('hairyNemesisApp')
     };
 
     $scope.saveCurso = function() {
-      $scope.cursos.push({
-        id : undefined,
-        name : $scope.newCurso.name
-      });
+      console.log($scope.newCurso);
+      $scope.cursos.push($scope.newCurso);
       $scope.newCurso = {};
       console.log('TODO saveCurso()');
     };

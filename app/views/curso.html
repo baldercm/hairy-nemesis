@@ -11,6 +11,16 @@
         <input ng-model="newCurso.name" type="text" id="nombre" class="form-control">
       </div>
     </div>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="start">Inicio</label>
+        <input ng-model="newCurso.start" datepicker-popup type="text" id="start" class="form-control" />
+      </div>
+      <div class="form-group col-md-6">
+        <label for="end">Fin</label>
+        <input ng-model="newCurso.end" datepicker-popup type="text" id="end" class="form-control" />
+      </div>
+    </div>
     <div class="form-group">
       <button id="save" ng-click="saveCurso()" type="submit" class="btn btn-primary">
         <i my-glyphicon="floppy-disk"></i> Guardar
@@ -26,14 +36,26 @@
   <table class="table table-hover table-striped">
     <thead>
       <tr>
-        <th>Id</th>
+        <th>Id <i class="pull-right" my-glyphicon="sort"/></th>
         <th>Nombre</th>
+        <th>Inicio</th>
+        <th>Fin</th>
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="curso in cursos | orderBy:'name'">
-        <td><a ng-bind="curso.id"></a></td>
-        <td><a ng-bind="curso.name"></a></td>
+      <tr ng-repeat="curso in cursos | orderBy:'start':true">
+        <td>
+          <a ng-bind="curso.id"></a>
+        </td>
+        <td>
+          <a ng-bind="curso.name"></a>
+        </td>
+        <td>
+          <a ng-bind="curso.start | date:'short'"></a>
+        </td>
+        <td>
+          <a ng-bind="curso.end | date:'short'"></a>
+        </td>
       </tr>
     </tbody>
   </table>
