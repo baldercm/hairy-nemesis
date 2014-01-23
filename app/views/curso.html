@@ -1,0 +1,40 @@
+<div role="toolbar">
+  <button id="new" ng-click="toggleForm()" type="button" class="btn btn-primary"><i my-glyphicon="plus-sign"></i> Nuevo Curso</button>
+</div>
+
+<div collapse="options.formCollapse">
+  <form name="cursoForm" role="form">
+    <legend>Crear Curso</legend>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="nombre">Nombre</label>
+        <input ng-model="newCurso.name" type="text" id="nombre" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <button id="save" ng-click="saveCurso()" type="submit" class="btn btn-primary">
+        <i my-glyphicon="floppy-disk"></i> Guardar
+      </button>
+      <button id="back" ng-click="toggleForm()" type="button" class="btn btn-default">
+        <i my-glyphicon="ban-circle"></i> Cancelar
+      </button>
+    </div>
+  </form>
+</div>
+
+<div>
+  <table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="curso in cursos | orderBy:'name'">
+        <td><a ng-bind="curso.id"></a></td>
+        <td><a ng-bind="curso.name"></a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
