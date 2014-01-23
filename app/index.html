@@ -12,8 +12,9 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <!-- endbower -->
+    <link rel="stylesheet" href="bower_components/bootswatch/cerulean/bootstrap.min.css">
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -37,18 +38,18 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#/"><i my-glyphicon="home"></i> Home</a></li>
+            <li><a href="#/"><i fa-icon="home"></i> Home</a></li>
             <li><a href="#/curso">Cursos</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#/about"><i my-glyphicon="info-sign"></i> About</a></li>
+            <li><a href="#/about"><i fa-icon="info-circle"></i> About</a></li>
             <li class="dropdown pull-right">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <i fa-icon="chevron-down"></i></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Action</a></li>
                 <li class="divider"></li>
                 <li class="dropdown-header">Nav header</li>
-                <li><a href="#"><i my-glyphicon="link"></i> Separated link</a></li>
+                <li><a href="#"><i fa-icon="link" class="fa-fw"></i> Separated link</a></li>
               </ul>
             </li>
           </ul>
@@ -94,6 +95,7 @@
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/about.js"></script>
     <script src="scripts/controllers/curso.js"></script>
+    <script src="scripts/directives/faIcon.js"></script>
     <script src="scripts/directives/myGlyphicon.js"></script>
     <!-- endbuild -->
 </body>

@@ -1,5 +1,5 @@
 <div role="toolbar">
-  <button id="new" ng-click="toggleForm()" type="button" class="btn btn-primary"><i my-glyphicon="plus-sign"></i> Nuevo Curso</button>
+  <button id="new" ng-click="toggleForm()" type="button" class="btn btn-primary"><i fa-icon="plus-circle"></i> Nuevo Curso</button>
 </div>
 
 <div collapse="options.formCollapse">
@@ -23,10 +23,10 @@
     </div>
     <div class="form-group">
       <button id="save" ng-click="saveCurso()" type="submit" class="btn btn-primary">
-        <i my-glyphicon="floppy-disk"></i> Guardar
+        <i fa-icon="save"></i> Guardar
       </button>
-      <button id="back" ng-click="toggleForm()" type="button" class="btn btn-default">
-        <i my-glyphicon="ban-circle"></i> Cancelar
+      <button id="back" ng-click="toggleForm()" type="reset" class="btn btn-default">
+        <i fa-icon="ban"></i> Cancelar
       </button>
     </div>
   </form>
@@ -36,9 +36,9 @@
   <table class="table table-hover table-striped">
     <thead>
       <tr>
-        <th>Nombre</th>
-        <th>Inicio</th>
-        <th>Fin</th>
+        <th>Nombre <i fa-icon="sort"></i></th>
+        <th>Inicio <i fa-icon="sort-numeric-desc"></i></th>
+        <th>Fin <i fa-icon="sort"></i></th>
       </tr>
     </thead>
     <tbody>
