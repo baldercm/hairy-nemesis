@@ -14,7 +14,6 @@ angular.module('hairyNemesisApp')
     };
 
     $scope.saveCurso = function() {
-      console.log($scope.newCurso);
       $scope.cursos.push($scope.newCurso);
       $scope.newCurso = {};
       console.log('TODO saveCurso()');

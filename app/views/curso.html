@@ -36,7 +36,6 @@
   <table class="table table-hover table-striped">
     <thead>
       <tr>
-        <th>Id <i class="pull-right" my-glyphicon="sort"/></th>
         <th>Nombre</th>
         <th>Inicio</th>
         <th>Fin</th>
@@ -45,16 +44,13 @@
     <tbody>
       <tr ng-repeat="curso in cursos | orderBy:'start':true">
         <td>
-          <a ng-bind="curso.id"></a>
-        </td>
-        <td>
           <a ng-bind="curso.name"></a>
         </td>
         <td>
-          <a ng-bind="curso.start | date:'short'"></a>
+          <a ng-bind="curso.start | date:'shortDate'"></a>
         </td>
         <td>
-          <a ng-bind="curso.end | date:'short'"></a>
+          <a ng-bind="curso.end | date:'shortDate'"></a>
         </td>
       </tr>
     </tbody>
