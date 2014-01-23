@@ -3,9 +3,9 @@
 angular.module('hairyNemesisApp')
   .controller('CursoCtrl', function ($scope) {
     $scope.cursos = [
-      { id: 1, name: 'Curso 11-12', start : new Date(2011, 8, 1)},
-      { id: 2, name: 'Curso 12-13', start : new Date(2012, 8, 1)},
-      { id: 3, name: 'Curso 13-14', start : new Date(2013, 8, 1)}
+      { id: 1, name: 'Curso 11-12', start : new Date(2011, 8, 15), end : new Date(2012, 5, 15)},
+      { id: 2, name: 'Curso 12-13', start : new Date(2012, 8, 12)},
+      { id: 3, name: 'Curso 13-14', start : new Date(2013, 8, 17)}
     ];
 
     $scope.newCurso = {};
